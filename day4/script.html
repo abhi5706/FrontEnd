@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CALCULATOR(){
+            var kgvalue=document.getElementById("weightvalue").value;
+            var htvalue=document.getElementById("heightvalue").value;
+            var BMI=kgvalue/(htvalue*htvalue)
+            console.log("bmi is" + BMI)
+            document.getElementById("abhi2").innerHTML=BMI
+            
+            if (BMI<18) {
+                console.log("under weight")
+                document.getElementById("abhi").innerHTML="under weight"
+            }
+            else if (BMI>=18&&BMI<=25) {
+                console.log("normal weight")
+                document.getElementById("abhi").innerHTML="normal weight"
+             
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body style="background-color: aquamarine;">
+<h1>BMI CALCULATOR</h1>
+<label>WEIGHT:</label>
+<input id="weightvalue" type="number" placeholder="enter the weight in kgs "></input>
+<label>HEIGHT:</label>
+<input id="heightvalue" type="number"placeholder="enter the height in meters "></input>
+<input type="button" value="submit" onclick="CALCULATOR()"></input>
+<h2 id="abhi">stage:</h2>
+<h2 id="abhi2" style="color: rgb(126, 65, 65);">BMI VALUE:</h2>
+
+
+    
+</body>
+</html>
